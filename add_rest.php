@@ -11,6 +11,12 @@ if(isset($_POST['submit'])){
     if(isset($_FILES['image']['name']) ){
     
         $image_name =$_FILES['image']['name'];
+        
+        
+        $ext = end(explode('.',$image_name));
+
+        $image_name = "Restaurant_image".rand(000,999).'.'.$ext;
+
         $source_path =$_FILES['image']['tmp_name'];
         $destination_path='C:/xampp/htdocs/IWT-PROJECT/images/'.$image_name;
         $upload = move_uploaded_file($source_path,$destination_path);
@@ -33,9 +39,19 @@ $insert = "INSERT INTO add_rest(image_name,rest_id,rest_name,address,type) VALUE
       
 
 
-mysqli_query($conn,$insert);
-header('location:admin_page.php');
+$result=mysqli_query($conn,$insert);
+$row=mysqli_fetch_array($result);
+$_SESSION['res_name']=$row['rest_name'];
+
+
+header('location:menu_set.php');
+
+
+
+
+
 }
+
 
 
 ?>
@@ -57,7 +73,9 @@ header('location:admin_page.php');
 <body>
 <div class="form-container">
     <div class="error"></div>
+
         <form action="" method="post" enctype="multipart/form-data">
+       
             <h3>Add restaurant</h3>
            <table>
             <tr>

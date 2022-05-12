@@ -23,7 +23,7 @@ if(mysqli_num_rows($result) >0){
 
     }
     elseif($row['user_type']=='user'){
-        $_SESSION['admin_name'] = $row['name'];
+        $_SESSION['user_name'] = $row['name'];
         header('location:user_page.php');
     }
 }
@@ -44,7 +44,7 @@ else{
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login_form</title>
-    <link rel="stylesheet" href="style2.css">k
+    <link rel="stylesheet" href="style2.css">   
 </head>
 <body>
     <div class="form-container">
