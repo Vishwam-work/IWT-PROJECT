@@ -31,7 +31,7 @@ if(!isset($_SESSION['user_name'])){
         <div class="content">
             <h3>hi , User</h3>
             <h1>Welcome <span><?php echo $_SESSION['user_name']?></span></h1>
-            <a href="index.html" class="btn">HOME PAGE</a>
+            <a href="index.php" class="btn">HOME PAGE</a>
            
             <a href="logout.php" class="btn">logout</a>
             

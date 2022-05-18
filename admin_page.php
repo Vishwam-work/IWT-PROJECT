@@ -2,6 +2,13 @@
 @include 'config.php';
 
 session_start();
+$email=$_SESSION['email'];
+if($email){
+}
+else{
+    echo"nooo";
+}
+
 
 if(!isset($_SESSION['admin_name'])){
     header('location:login_form.php');

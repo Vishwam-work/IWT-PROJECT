@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL ^ E_WARNING); 
 @include 'config.php';
 if(isset($_POST['submit'])){
     $image_name =$_FILES['image']['name'];
@@ -12,9 +13,10 @@ if(isset($_POST['submit'])){
     
         $image_name =$_FILES['image']['name'];
         
-        
-        $ext = end(explode('.',$image_name));
 
+
+        $ext = (explode('.',$image_name));
+        end($ext);
         $image_name = "Restaurant_image".rand(000,999).'.'.$ext;
 
         $source_path =$_FILES['image']['tmp_name'];
@@ -39,17 +41,8 @@ $insert = "INSERT INTO add_rest(image_name,rest_id,rest_name,address,type) VALUE
       
 
 
-$result=mysqli_query($conn,$insert);
-$row=mysqli_fetch_array($result);
-$_SESSION['res_name']=$row['rest_name'];
-
-
-header('location:menu_set.php');
-
-
-
-
-
+mysqli_query($conn,$insert);
+header('location:categories.php');
 }
 
 

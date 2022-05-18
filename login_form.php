@@ -2,7 +2,8 @@
 
 @include 'config.php';
 
-session_start();
+ session_start();
+
 if(isset($_POST['submit'])){
 
 
@@ -13,6 +14,8 @@ $pass = md5($_POST['password']);
 
 $select = "SELECT * FROM user_form WHERE email = '$email' && password='$pass'";
 $result = mysqli_query($conn,$select);
+
+$_SESSION['email']=$email;
 
 if(mysqli_num_rows($result) >0){
 
