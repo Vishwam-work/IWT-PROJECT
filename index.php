@@ -65,7 +65,7 @@ error_reporting(E_ALL ^ E_WARNING);
         
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#">Order now</a>
+                        <a class="nav-link " href="user_order.php">Order now</a>
                     </li>
                 </ul>
 

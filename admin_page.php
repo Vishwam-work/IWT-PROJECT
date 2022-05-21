@@ -37,7 +37,6 @@ if(!isset($_SESSION['admin_name'])){
             <h3>hi , admin</h3>
             <h1>Welcome <span><?php echo $_SESSION['admin_name']?></span></h1>
             <a href="add_rest.php" class="btn">Add your restaurant</a>
-            <a href="register_form.php" class="btn">Orders</a>
             <a href="logout.php" class="btn">logout</a>
             
         </div>

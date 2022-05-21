@@ -1,4 +1,4 @@
-<?php include "db_conn.php"; ?>
+<?php include "config.php"; ?>
 <?php 
           $sql = "SELECT * FROM images ORDER BY id ASC";
           $res = mysqli_query($conn,  $sql);
