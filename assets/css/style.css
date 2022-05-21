@@ -574,7 +574,7 @@ canvas {
     position: absolute;
     top: 0;
     height: 37px;
-    width: 10px;
+    width: 100px;
     background: #e8e9ef
 }
 
@@ -587,7 +587,12 @@ canvas {
 }
 
 .order-table tr th {
-    background: #e8e9ef
+    background: #e8e9ef;
+    width: 100%
+}
+.order-table tr{
+    background: #e8e9ef;
+   padding: 0;
 }
 
 .order-table tr td:last-child,

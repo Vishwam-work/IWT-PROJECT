@@ -42,7 +42,7 @@ $insert = "INSERT INTO add_rest(image_name,rest_id,rest_name,address,type) VALUE
 
 
 mysqli_query($conn,$insert);
-header('location:categories.php');
+header('location:index1.php');
 }
 
 
